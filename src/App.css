@@ -1,0 +1,88 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+
+.App-link {
+  color: #61dafb;
+}
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.nav-link {
+  display: inline-block;
+  margin-left:70px;
+  position: relative;
+  color: #0087ca;
+}
+
+.nav-link:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #0087ca;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+  
+}
+
+.nav-link:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.navbar-brand{
+  margin-left:50px;
+}
+.getdetail{
+  text-align: center;
+}
+.navbar{
+  border-bottom:1px solid #a3a9ae;
+}
+.nav-link:focus {
+  font-size: large;
+  color: black !important;
+  font-weight:600;
+  border-bottom: 2px solid #0087ca;
+}
+.card{
+  border:1.8px solid #d2d3d7;
+}
+.card-img-top{
+  margin-top: 10px;
+}
