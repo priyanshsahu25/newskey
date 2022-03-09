@@ -45,13 +45,17 @@ export class News extends Component {
     }
     render() {
         let { newstype } = this.props;
+        console.log(this.state);
         return (
             <>
                 <br></br>
                 <h2 className="text-center headline">Top Headlines of {newstype} </h2>
                 <div className="container my-4">
                     <div className="row">
-                        {this.state.articles.map((element) => {
+                        {
+                        
+                        this.state.articles.map((element) => {
+                            console.log(this.state.articles);
                             return <div className="col-md-4">
                                 <Newsitem key={element.url} title={element.title.slice(0, 45)} description={element.description ? element.description.slice(0, 81) : "hello"} imgurl={!element.urlToImage ? "https://sm.pcmag.com/t/pcmag_in/news/i/iphone-13-/iphone-13-teardown-reveals-third-party-screen-replacements-d_rg9c.1200.jpg" : element.urlToImage} newsurl={element.url}
                                     author={!element.author ? "Unknown" : element.author} date={new Date(element.publishedAt).toGMTString()} source={element.source.name} />
