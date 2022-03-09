@@ -48,7 +48,7 @@ export class News extends Component {
     render() {
         let { newstype } = this.props;
         console.log(this.state.articles);
-        if(this.state.articles.length > 0){
+        if(this.state.articles){
             return (
                 <>
                     <br></br>
